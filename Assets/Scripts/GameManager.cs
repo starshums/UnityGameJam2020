@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
     public GameObject secretsCollectionGO;
     public int numberOfSecrets;
 
+    public GameObject[] earGuardsSets;
+    public GameObject earGuardsCollectionGO;
+    public int numberOfEarGuardsSets;
+
     void Start()
     {
         numberOfDeliveryLocations = deliveryLocationsGO.transform.childCount;
@@ -25,6 +29,10 @@ public class GameManager : MonoBehaviour
         numberOfSecrets = secretsCollectionGO.transform.childCount;
         secrets = new GameObject[numberOfSecrets];
         AssignSecrets();
+
+        numberOfEarGuardsSets = earGuardsCollectionGO.transform.childCount;
+        earGuardsSets = new GameObject[numberOfEarGuardsSets];
+        AssignEarGuardSets();
     }
 
     
@@ -53,6 +61,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void AssignEarGuardSets()
+    {
+        for (int i = 0; i < numberOfEarGuardsSets; i++)
+        {
+            earGuardsSets[i] = earGuardsCollectionGO.transform.GetChild(i).gameObject;
+            earGuardsSets[i].SetActive(false);
+            if (i == 0)
+            {
+                earGuardsSets[i].SetActive(true);
+            }
+        }
+    }
     public void DetermineDeliveryLocation(int secretNumber)         //mapping of secret number with location number
     {
         switch (secretNumber)               //determines the Delivery Location number. By that way, we can control which secret number should go to which delivery location
@@ -107,6 +127,7 @@ public class GameManager : MonoBehaviour
         if (ItemDetection.totalSecretsDelivered<numberOfSecrets)
         {
             secrets[ItemDetection.totalSecretsDelivered].SetActive(true);
+            earGuardsSets[ItemDetection.totalSecretsDelivered].SetActive(true);
         }
     }
 }

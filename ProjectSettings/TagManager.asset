@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PickUp
   - DeliveryLocation
+  - Enemy
   layers:
   - Default
   - TransparentFX
