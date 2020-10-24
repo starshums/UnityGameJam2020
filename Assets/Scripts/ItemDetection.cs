@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class ItemDetection : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public GameObject pickUpItemUI;
     public bool isItemPickedUp;
     public bool canPickUp;
     public GameObject detectedItem;
     public GameObject grabbedItem;
-    
+
+    public static int totalSecretsDelivered = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +26,13 @@ public class ItemDetection : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                pickUpItemUI.SetActive(false);
                 isItemPickedUp = true;
-                grabbedItem.SetActive(true);
+                gameManager.DetermineDeliveryLocation(totalSecretsDelivered);
                 if (detectedItem != null)
                 {
-                    GameObject.Destroy(detectedItem);
+                    grabbedItem.SetActive(true);
+                    gameManager.secrets[totalSecretsDelivered].SetActive(false);
                 }
             }
         }
