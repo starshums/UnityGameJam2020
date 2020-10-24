@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7309340507797608326}
   m_Layer: 5
-  m_Name: DeactivateTrapUI
+  m_Name: PickUpItemUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
