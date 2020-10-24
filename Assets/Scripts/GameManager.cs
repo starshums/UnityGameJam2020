@@ -23,9 +23,11 @@ public class GameManager : MonoBehaviour
 
     public HealthManager healthManager;
     public GameObject gameOverScreen;
+    public bool pause = false;
 
-    void Start()
-    {
+    void Start() {
+        if(Time.timeScale == 0) Time.timeScale = 1;
+
         numberOfDeliveryLocations = deliveryLocationsGO.transform.childCount;
         deliveryLocations = new GameObject[numberOfDeliveryLocations];
         AssignDeliveryLocationsToArray();
@@ -53,7 +55,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Retry() {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void AssignSecrets()
