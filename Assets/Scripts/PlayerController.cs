@@ -14,10 +14,15 @@ public class PlayerController : MonoBehaviour {
     public GameObject playerModel;
 
     private float rotateSpeed = 0.3f;
+    public HealthManager healthManager;
+    public int maxHealth = 200;
+    public int currentHealth;
 
     void Start() {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        currentHealth = maxHealth;
+        healthManager.SetMaxHealth(maxHealth);
     }
 
     void Update() {
@@ -45,6 +50,11 @@ public class PlayerController : MonoBehaviour {
     IEnumerator Jumping() {
         moveDirection.y = jumpForce;
         yield return new WaitForSeconds(1);
+    }
+
+    public void Damage(int damage) {
+        currentHealth -= damage;
+        healthManager.SetHealth(currentHealth);
     }
 
 }

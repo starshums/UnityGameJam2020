@@ -82,4 +82,11 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("Player")) {
+            Debug.Log("Hit Player");
+            other.gameObject.GetComponent<PlayerController>().Damage(10);
+        }
+    }
+
 }

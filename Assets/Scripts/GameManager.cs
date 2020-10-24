@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class GameManager : MonoBehaviour
     public GameObject earGuardsCollectionGO;
     public int numberOfEarGuardsSets;
 
+    public HealthManager healthManager;
+    public GameObject gameOverScreen;
+
     void Start()
     {
         numberOfDeliveryLocations = deliveryLocationsGO.transform.childCount;
@@ -36,9 +40,20 @@ public class GameManager : MonoBehaviour
     }
 
     
-    void Update()
-    {
-        
+    void Update() {
+        if(healthManager.slider.value == 0) GameOver();
+    }
+
+    void GameOver() {
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        FindObjectOfType<CameraController>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Retry() {
+        SceneManager.LoadScene("Level1");
     }
 
     void AssignSecrets()
