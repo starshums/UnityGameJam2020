@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public bool pause = false;
     public GameObject winScreen;
+    public TextMeshProUGUI causeOfLosingText;
     public TextMeshProUGUI deliveryProgressText;
 
     [Header("Audio Settings")]
@@ -71,14 +72,14 @@ public class GameManager : MonoBehaviour
 
     
     void Update() {
-        if(playerController.currentHealth <= 0) GameOver();
+        if(playerController.currentHealth <= 0) GameOver("The ears got to you!");
 
         arrow.transform.LookAt(deliveryLocations[indexOfActivatedDL].transform);
 
         if ((secondsRemaining -= Time.deltaTime)<=0)
         {
             timerText.text = "00:00";
-            GameOver();
+            GameOver("Time's up!!!");
         }
         else
         {
@@ -86,8 +87,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void GameOver() {
+    void GameOver(string causeOfLosing) {
         gameOverScreen.SetActive(true);
+        causeOfLosingText.text = causeOfLosing;
         Time.timeScale = 0;
         Cursor.visible = true;
         FindObjectOfType<CameraController>().enabled = false;
