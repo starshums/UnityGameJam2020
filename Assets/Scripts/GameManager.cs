@@ -3,41 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Script References")]
     public ItemDetection itemDetection;
     public PlayerController playerController;
+    public HealthManager healthManager;
 
+    [Header("Delivery Mechanism")]
     public GameObject[] deliveryLocations;
     public GameObject deliveryLocationsGO;
     public int numberOfDeliveryLocations;
     public int indexOfActivatedDL = 0;          //DL stands for 'Delivery Location'. This variable will help in checking if the player delvered the secret to the right house.
     public GameObject grabbedItem;
 
+    [Header("Secrets Mechanism")]
     public GameObject[] secrets;
     public GameObject secretsCollectionGO;
     public int numberOfSecrets;
 
+    [Header("Enemies mechanism")]
     public GameObject[] earGuardsSets;
     public GameObject earGuardsCollectionGO;
     public int numberOfEarGuardsSets;
 
-    public HealthManager healthManager;
+    [Header("Victory and Defeat Mechanism")]
     public GameObject gameOverScreen;
     public bool pause = false;
-
     public GameObject winScreen;
     public TextMeshProUGUI deliveryProgressText;
 
+    [Header("Audio Settings")]
     public AudioSource audioSource;
     public AudioClip audioSecretGrabbed;
     public AudioClip audioSecretDelivered;
 
+    [Header("Arrow")]
     public GameObject arrow;
-    
+
+    [Header("Timer Settings")]
+    public int totalMinutes;
+    public int totalSeconds;
+    public TextMeshProUGUI timerText;
+    float secondsRemaining;
+
     void Start() {
-        if(Time.timeScale == 0) Time.timeScale = 1;
+        indexOfActivatedDL = 0;
+
+        if (Time.timeScale == 0) Time.timeScale = 1;
 
         numberOfDeliveryLocations = deliveryLocationsGO.transform.childCount;
         deliveryLocations = new GameObject[numberOfDeliveryLocations];
@@ -50,6 +65,8 @@ public class GameManager : MonoBehaviour
         numberOfEarGuardsSets = earGuardsCollectionGO.transform.childCount;
         earGuardsSets = new GameObject[numberOfEarGuardsSets];
         AssignEarGuardSets();
+
+        secondsRemaining = totalSeconds + (totalMinutes * 60);
     }
 
     
@@ -57,6 +74,16 @@ public class GameManager : MonoBehaviour
         if(playerController.currentHealth <= 0) GameOver();
 
         arrow.transform.LookAt(deliveryLocations[indexOfActivatedDL].transform);
+
+        if ((secondsRemaining -= Time.deltaTime)<=0)
+        {
+            timerText.text = "00:00";
+            GameOver();
+        }
+        else
+        {
+            timerText.text = TimeSpan.FromSeconds(secondsRemaining).ToString(@"mm\:ss");
+        }
     }
 
     void GameOver() {
@@ -153,7 +180,7 @@ public class GameManager : MonoBehaviour
             {
                 ItemDetection.totalSecretsDelivered++;
                 int totalSecDeli = ItemDetection.totalSecretsDelivered;
-                deliveryProgressText.SetText("Secrets delivered : " + totalSecDeli + "/" + numberOfSecrets);
+                deliveryProgressText.text = "Secrets delivered : " + totalSecDeli + "/" + numberOfSecrets;
                 //Debug.Log(ItemDetection.totalSecretsDelivered);
                 //Debug.Log("delivered to right location");
                 grabbedItem.SetActive(false);
