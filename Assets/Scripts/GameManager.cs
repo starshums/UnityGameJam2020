@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public ItemDetection itemDetection;
+    public PlayerController playerController;
 
     public GameObject[] deliveryLocations;
     public GameObject deliveryLocationsGO;
@@ -25,6 +27,9 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public bool pause = false;
 
+    public GameObject winScreen;
+    public TextMeshProUGUI deliveryProgressText;
+    
     void Start() {
         if(Time.timeScale == 0) Time.timeScale = 1;
 
@@ -43,7 +48,8 @@ public class GameManager : MonoBehaviour
 
     
     void Update() {
-        if(healthManager.slider.value == 0) GameOver();
+        if(playerController.currentHealth <= 0) GameOver();
+
     }
 
     void GameOver() {
@@ -55,6 +61,25 @@ public class GameManager : MonoBehaviour
     }
 
     public void Retry() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    public void CheckIfWon(int totalSecDeli)
+    {
+        if (totalSecDeli == numberOfSecrets)
+        {
+            //PLAYER WON
+            winScreen.SetActive(true);
+            //Time.timeScale = 0;
+            Cursor.visible = true;
+            FindObjectOfType<CameraController>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void PlayAgain()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -116,13 +141,15 @@ public class GameManager : MonoBehaviour
     {
         if (indexOfActivatedDL<=deliveryLocations.Length)
         {
-            if (currentLocation == deliveryLocations[indexOfActivatedDL])
+            if (currentLocation == deliveryLocations[indexOfActivatedDL])           //delivered to right location
             {
                 ItemDetection.totalSecretsDelivered++;
+                int totalSecDeli = ItemDetection.totalSecretsDelivered;
+                deliveryProgressText.SetText("Secrets delivered : " + totalSecDeli + "/" + numberOfSecrets);
                 //Debug.Log(ItemDetection.totalSecretsDelivered);
                 //Debug.Log("delivered to right location");
                 grabbedItem.SetActive(false);
-                ActivateNextSecret();
+                ActivateNextSecret(totalSecDeli);
                 itemDetection.isItemPickedUp = false;
                 return true;
             }
@@ -139,17 +166,18 @@ public class GameManager : MonoBehaviour
         
     }
 
+    
     public void DeactivateSecret(int secretNum)
     {
         secrets[secretNum].SetActive(false);
         Debug.Log("Called me?");
     }
-    void ActivateNextSecret()
+    void ActivateNextSecret(int totalSecDeli)
     {
-        if (ItemDetection.totalSecretsDelivered<numberOfSecrets)
+        if (totalSecDeli < numberOfSecrets)
         {
-            secrets[ItemDetection.totalSecretsDelivered].SetActive(true);
-            earGuardsSets[ItemDetection.totalSecretsDelivered].SetActive(true);
+            secrets[totalSecDeli].SetActive(true);
+            earGuardsSets[totalSecDeli].SetActive(true);
         }
     }
 }
