@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour {
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
 		moveDirection = moveDirection.normalized * moveSpeed;
         // Jumping
-        if( controller.isGrounded && Input.GetButtonDown("Jump") ) StartCoroutine("Jumping");
+        //if( controller.isGrounded && Input.GetButtonDown("Jump") ) StartCoroutine("Jumping");
 		moveDirection.y += Physics.gravity.y * gravityScale * Time.deltaTime;
 		controller.Move( moveDirection * Time.deltaTime );
         // Move player in different directions
@@ -48,12 +48,12 @@ public class PlayerController : MonoBehaviour {
         // Running & Idle Animations
         animator.SetFloat("Speed", (Mathf.Abs(Input.GetAxis ("Vertical")) + Mathf.Abs(Input.GetAxis ("Horizontal"))));
 	}
-
+    /*
     IEnumerator Jumping() {
         moveDirection.y = jumpForce;
         yield return new WaitForSeconds(1);
     }
-
+    */
     public void Damage(int damage) {
         currentHealth -= damage;
         healthManager.SetHealth(currentHealth);
