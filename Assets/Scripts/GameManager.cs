@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     
     void Update() {
-        if(playerController.currentHealth <= 0) GameOver("The ears got to you!");
+        if(playerController.currentHealth <= 0) GameOver("The secret is exposed");
 
         arrow.transform.LookAt(deliveryLocations[indexOfActivatedDL].transform);
         if (!isGameFinished)
