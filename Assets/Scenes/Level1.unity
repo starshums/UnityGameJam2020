@@ -18753,7 +18753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.24056602, b: 0.24056602, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.051581383, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -56896,6 +56896,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1533866887}
+  maxHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  minHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  healthFillImage: {fileID: 765364531}
 --- !u!1 &1535428927
 GameObject:
   m_ObjectHideFlags: 0
