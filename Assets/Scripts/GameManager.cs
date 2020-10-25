@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject winScreen;
     public TextMeshProUGUI deliveryProgressText;
+
+    public AudioSource audioSource;
+    public AudioClip audioSecretGrabbed;
+    public AudioClip audioSecretDelivered;
     
     void Start() {
         if(Time.timeScale == 0) Time.timeScale = 1;
@@ -151,6 +155,8 @@ public class GameManager : MonoBehaviour
                 grabbedItem.SetActive(false);
                 ActivateNextSecret(totalSecDeli);
                 itemDetection.isItemPickedUp = false;
+
+                PlaySoundEffects(2);
                 return true;
             }
             else
@@ -166,7 +172,22 @@ public class GameManager : MonoBehaviour
         
     }
 
-    
+    public void PlaySoundEffects(int soundEffect)
+    {
+        switch (soundEffect)
+        {
+            case 1:
+                audioSource.clip = audioSecretGrabbed;
+                break;
+            case 2:
+                audioSource.clip = audioSecretDelivered;
+                break;
+            default:
+                audioSource.clip = audioSecretGrabbed;
+                break;
+        }
+        audioSource.Play();
+    }
     public void DeactivateSecret(int secretNum)
     {
         secrets[secretNum].SetActive(false);

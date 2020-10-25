@@ -33,6 +33,7 @@ public class ItemDetection : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                gameManager.PlaySoundEffects(1);
                 secretNumber++;
                 pickUpItemUI.SetActive(false);
                 isItemPickedUp = true;
