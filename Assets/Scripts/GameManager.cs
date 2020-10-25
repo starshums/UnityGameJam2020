@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioSecretGrabbed;
     public AudioClip audioSecretDelivered;
+    public AudioClip audioEarSoundEffect;
 
     [Header("Arrow")]
     public GameObject arrow;
@@ -230,6 +231,9 @@ public class GameManager : MonoBehaviour
                 break;
             case 2:                                                    // 2 : If secret is delivered
                 audioSource.clip = audioSecretDelivered;
+                break;
+            case 3:
+                audioSource.clip = audioEarSoundEffect;
                 break;
             default:
                 audioSource.clip = audioSecretGrabbed;

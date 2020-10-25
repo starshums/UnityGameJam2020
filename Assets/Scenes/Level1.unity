@@ -514,6 +514,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 1403797419}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &46024857
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2447,6 +2448,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 458499845}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &215820469
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2920,6 +2922,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 1403797419}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &248290290
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3319,6 +3322,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 1403797419}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &278112951
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9136,6 +9140,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 19400957}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &333200204
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16821,6 +16826,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 1106685764}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &539909821
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17558,6 +17564,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 1403797419}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &595774051
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19832,6 +19839,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 1106685764}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &806367813
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -26170,6 +26178,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 1106685764}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!65 &920065735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27044,6 +27053,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 458499845}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &966427882
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -41806,6 +41816,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 19400957}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &1375820069
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -47324,6 +47335,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 76769581}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &1408506443
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -59982,6 +59994,7 @@ MonoBehaviour:
   audioSource: {fileID: 1791140544}
   audioSecretGrabbed: {fileID: 8300000, guid: 4a8954adb8ccac843b3704f73b24e2db, type: 3}
   audioSecretDelivered: {fileID: 8300000, guid: 8e04b8f8f6738d94ab050da9977f61b9, type: 3}
+  audioEarSoundEffect: {fileID: 8300000, guid: 38eeefdf9726da644a581fcd0ba46e4b, type: 3}
   arrow: {fileID: 138240856}
   totalMinutes: 3
   totalSeconds: 0
@@ -60167,6 +60180,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 458499845}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &1652913884
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -65172,6 +65186,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 1403797419}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &1669122081
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -67983,6 +67998,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 76769581}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &1821977361
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -68357,6 +68373,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 19400957}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &1837772568
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -75905,6 +75922,7 @@ MonoBehaviour:
   numberOfPatrolPoints: 0
   walkPointCollectionGO: {fileID: 76769581}
   isNextWalkPointSet: 0
+  playSoundEffect: 0
 --- !u!195 &2041205359
 NavMeshAgent:
   m_ObjectHideFlags: 0

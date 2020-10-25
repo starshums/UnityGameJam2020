@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
     public int currentHealth;
 
     public bool isGameFinished;
+
     void Start() {
         isGameFinished = false;
         controller = GetComponent<CharacterController>();
@@ -65,6 +66,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (!isGameFinished)
             {
+                FindObjectOfType<GameManager>().PlaySoundEffects(3);
                 Debug.Log("Hit Player");
                 Damage(10);
             }
