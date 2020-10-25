@@ -176,10 +176,10 @@ public class GameManager : MonoBehaviour
     {
         switch (soundEffect)
         {
-            case 1:
+            case 1:                                                    // 1 : If secret is grabbed
                 audioSource.clip = audioSecretGrabbed;
                 break;
-            case 2:
+            case 2:                                                    // 2 : If secret is delivered
                 audioSource.clip = audioSecretDelivered;
                 break;
             default:
