@@ -19817,6 +19817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1630393144}
+  itemDetection: {fileID: 1812136526}
   confettiCelebration: {fileID: 1467091644}
 --- !u!65 &841687144
 BoxCollider:
@@ -28168,6 +28169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1630393144}
+  itemDetection: {fileID: 1812136526}
   confettiCelebration: {fileID: 182297015}
 --- !u!65 &1159365604
 BoxCollider:
@@ -50835,6 +50837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1630393144}
+  itemDetection: {fileID: 1812136526}
   confettiCelebration: {fileID: 815072170}
 --- !u!1 &1423940090
 GameObject:
@@ -58320,6 +58323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1630393144}
+  itemDetection: {fileID: 1812136526}
   confettiCelebration: {fileID: 285706088}
 --- !u!65 &1661908848
 BoxCollider:
