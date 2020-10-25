@@ -22,12 +22,13 @@ public class DeliveryLocation : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered");
+            //Debug.Log("Player entered");
             bool isDeliveryLocationRight = gameManager.CheckIfDeliveredToRightLocation(this.gameObject);
             if (isDeliveryLocationRight)
             {
                 //Give some reward.
                 confettiCelebration.SetActive(true);
+                Debug.Log("Total secrets delivered: "+ItemDetection.totalSecretsDelivered);
             }
         }
     }

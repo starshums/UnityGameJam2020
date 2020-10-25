@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player Entered");
+            //Debug.Log("Player Entered");
             nextWalkPoint = other.transform;
             isNextWalkPointSet = true;
         }
@@ -77,7 +77,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player Exited");
+            //Debug.Log("Player Exited");
             isNextWalkPointSet = false;
         }
     }

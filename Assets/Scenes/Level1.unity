@@ -728,7 +728,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 85096744}
-  - component: {fileID: 85096745}
   m_Layer: 0
   m_Name: WalkPoint  1 (3)
   m_TagString: Untagged
@@ -750,19 +749,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &85096745
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85096743}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &87974928
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +903,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 119637804}
-  - component: {fileID: 119637805}
   m_Layer: 0
   m_Name: WalkPoint  1
   m_TagString: Untagged
@@ -939,19 +924,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &119637805
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119637803}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &122278182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1133,7 +1105,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 129018622}
-  - component: {fileID: 129018623}
   m_Layer: 0
   m_Name: WalkPoint  1 (14)
   m_TagString: Untagged
@@ -1155,19 +1126,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &129018623
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129018621}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &137720789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2113,7 +2071,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 205526734}
-  - component: {fileID: 205526735}
   m_Layer: 0
   m_Name: WalkPoint  1 (7)
   m_TagString: Untagged
@@ -2135,19 +2092,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &205526735
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205526733}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &208879797
 GameObject:
   m_ObjectHideFlags: 0
@@ -10416,7 +10360,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 429430862}
-  - component: {fileID: 429430863}
   m_Layer: 0
   m_Name: WalkPoint  1 (11)
   m_TagString: Untagged
@@ -10438,19 +10381,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &429430863
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429430861}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &440653597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11465,7 +11395,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 525853977}
-  - component: {fileID: 525853978}
   m_Layer: 0
   m_Name: WalkPoint  1 (6)
   m_TagString: Untagged
@@ -11487,19 +11416,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &525853978
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525853976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &529678241
 GameObject:
   m_ObjectHideFlags: 0
@@ -16965,7 +16881,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 574942275}
-  - component: {fileID: 574942276}
   m_Layer: 0
   m_Name: WalkPoint  1 (13)
   m_TagString: Untagged
@@ -16987,19 +16902,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &574942276
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574942274}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &578779624
 GameObject:
   m_ObjectHideFlags: 0
@@ -18848,7 +18750,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 766874587}
-  - component: {fileID: 766874588}
   m_Layer: 0
   m_Name: WalkPoint  1 (9)
   m_TagString: Untagged
@@ -18870,19 +18771,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &766874588
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766874586}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &776520648
 GameObject:
   m_ObjectHideFlags: 0
@@ -25677,7 +25565,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 918843453}
-  - component: {fileID: 918843454}
   m_Layer: 0
   m_Name: WalkPoint  1 (10)
   m_TagString: Untagged
@@ -25699,19 +25586,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &918843454
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918843452}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &920065731
 GameObject:
   m_ObjectHideFlags: 0
@@ -26243,7 +26117,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 959670177}
-  - component: {fileID: 959670178}
   m_Layer: 0
   m_Name: WalkPoint  1 (12)
   m_TagString: Untagged
@@ -26265,19 +26138,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &959670178
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959670176}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &963403253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34784,7 +34644,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306969261}
-  - component: {fileID: 1306969262}
   m_Layer: 0
   m_Name: WalkPoint  1 (5)
   m_TagString: Untagged
@@ -34806,19 +34665,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1306969262
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306969260}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1312297516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57303,7 +57149,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1572082645}
-  - component: {fileID: 1572082646}
   m_Layer: 0
   m_Name: WalkPoint  1 (4)
   m_TagString: Untagged
@@ -57325,19 +57170,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1572082646
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572082644}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1577008966
 GameObject:
   m_ObjectHideFlags: 0
@@ -57603,7 +57435,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1597758350}
-  - component: {fileID: 1597758351}
   m_Layer: 0
   m_Name: WalkPoint  1 (2)
   m_TagString: Untagged
@@ -57625,19 +57456,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1597758351
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597758349}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1599145009
 GameObject:
   m_ObjectHideFlags: 0
@@ -64460,7 +64278,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1744642178}
-  - component: {fileID: 1744642179}
   m_Layer: 0
   m_Name: WalkPoint  1 (1)
   m_TagString: Untagged
@@ -64482,19 +64299,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1744642179
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744642177}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1747793262
 GameObject:
   m_ObjectHideFlags: 0
@@ -65621,6 +65425,7 @@ MonoBehaviour:
   canPickUp: 0
   detectedItem: {fileID: 0}
   grabbedItem: {fileID: 803229271}
+  secretNumber: -1
 --- !u!1 &1817734884
 GameObject:
   m_ObjectHideFlags: 0
@@ -65670,7 +65475,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.5
+  m_Height: 1.57
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -65854,7 +65659,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1820480568}
-  - component: {fileID: 1820480569}
   m_Layer: 0
   m_Name: WalkPoint  1 (8)
   m_TagString: Untagged
@@ -65876,19 +65680,6 @@ Transform:
   m_Father: {fileID: 1403797420}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1820480569
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820480567}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1821883426
 GameObject:
   m_ObjectHideFlags: 0

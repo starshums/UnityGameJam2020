@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
             {
                 ItemDetection.totalSecretsDelivered++;
                 //Debug.Log(ItemDetection.totalSecretsDelivered);
-                Debug.Log("delivered to right location");
+                //Debug.Log("delivered to right location");
                 grabbedItem.SetActive(false);
                 ActivateNextSecret();
                 itemDetection.isItemPickedUp = false;
@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Wrong location mate!");
+                //Debug.Log("Wrong location mate!");
                 return false;
             }
         }
@@ -139,6 +139,11 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void DeactivateSecret(int secretNum)
+    {
+        secrets[secretNum].SetActive(false);
+        Debug.Log("Called me?");
+    }
     void ActivateNextSecret()
     {
         if (ItemDetection.totalSecretsDelivered<numberOfSecrets)

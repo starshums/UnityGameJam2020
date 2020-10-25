@@ -9,9 +9,10 @@ public class ItemDetection : MonoBehaviour
     public GameObject pickUpItemUI;
     public bool isItemPickedUp;
     public bool canPickUp;
-    public GameObject detectedItem;
+    public GameObject detectedItem;     //item(letter) in range to pickup
     public GameObject grabbedItem;
 
+    public int secretNumber = -1;
     public static int totalSecretsDelivered = 0;
     // Start is called before the first frame update
     void Start()
@@ -22,20 +23,30 @@ public class ItemDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isItemPickedUp)
+        {
+            pickUpItemUI.SetActive(false);
+            canPickUp = false;                          //ability to pickup
+            detectedItem = null;
+        }
         if (canPickUp)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                secretNumber++;
                 pickUpItemUI.SetActive(false);
                 isItemPickedUp = true;
                 gameManager.DetermineDeliveryLocation(totalSecretsDelivered);
                 if (detectedItem != null)
                 {
                     grabbedItem.SetActive(true);
-                    gameManager.secrets[totalSecretsDelivered].SetActive(false);
+                    //gameManager.secrets[totalSecretsDelivered].SetActive(false);
+                    gameManager.DeactivateSecret(totalSecretsDelivered);
                 }
+                Debug.Log("secret number is : " + secretNumber);
             }
         }
+        
     }
 
     private void OnTriggerStay(Collider other)
