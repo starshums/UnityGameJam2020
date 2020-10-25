@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] deliveryLocations;
     public GameObject deliveryLocationsGO;
     public int numberOfDeliveryLocations;
-    public int indexOfActivatedDL = 100;          //DL stands for 'Delivery Location'. This variable will help in checking if the player delvered the secret to the right house.
+    public int indexOfActivatedDL = 0;          //DL stands for 'Delivery Location'. This variable will help in checking if the player delvered the secret to the right house.
     public GameObject grabbedItem;
 
     public GameObject[] secrets;
@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioSecretGrabbed;
     public AudioClip audioSecretDelivered;
+
+    public GameObject arrow;
     
     void Start() {
         if(Time.timeScale == 0) Time.timeScale = 1;
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
     void Update() {
         if(playerController.currentHealth <= 0) GameOver();
 
+        arrow.transform.LookAt(deliveryLocations[indexOfActivatedDL].transform);
     }
 
     void GameOver() {
@@ -138,6 +141,7 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+        arrow.SetActive(true);
         //indexOfActivatedDL = Random.Range(0,numberOfDeliveryLocations);            //temporarily it is random. Will be commented later on.
     }
 
@@ -157,6 +161,7 @@ public class GameManager : MonoBehaviour
                 itemDetection.isItemPickedUp = false;
 
                 PlaySoundEffects(2);
+                arrow.SetActive(false);
                 return true;
             }
             else
