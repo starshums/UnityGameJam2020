@@ -23,8 +23,21 @@ public class EnemyController : MonoBehaviour
         numberOfPatrolPoints = walkPointCollectionGO.transform.childCount;
         walkPoints = new GameObject[numberOfPatrolPoints];
         AssignPatrolPoints();
+        AdjustEnemyMovementSettings();
     }
 
+    void AdjustEnemyMovementSettings()
+    {
+        agent.acceleration = 15;
+        agent.speed = 7;
+        agent.angularSpeed = 150;
+    }
+
+    public void FreezeMovement()
+    {
+        agent.acceleration = 0;
+        agent.speed = 0;
+    }
     // Update is called once per frame
     void Update()
     {

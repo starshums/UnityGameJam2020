@@ -14,9 +14,11 @@ public class ItemDetection : MonoBehaviour
 
     public int secretNumber = -1;
     public static int totalSecretsDelivered = 0;
+    public bool isGameFinished;
     // Start is called before the first frame update
     void Start()
     {
+        isGameFinished = false;
         secretNumber = -1;
         totalSecretsDelivered = 0;
     }
@@ -30,23 +32,30 @@ public class ItemDetection : MonoBehaviour
             canPickUp = false;                          //ability to pickup
             detectedItem = null;
         }
-        if (canPickUp)
+        if (!isGameFinished)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (canPickUp)
             {
-                gameManager.PlaySoundEffects(1);
-                secretNumber++;
-                pickUpItemUI.SetActive(false);
-                isItemPickedUp = true;
-                gameManager.DetermineDeliveryLocation(totalSecretsDelivered);
-                if (detectedItem != null)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    grabbedItem.SetActive(true);
-                    //gameManager.secrets[totalSecretsDelivered].SetActive(false);
-                    gameManager.DeactivateSecret(totalSecretsDelivered);
+                    gameManager.PlaySoundEffects(1);
+                    secretNumber++;
+                    pickUpItemUI.SetActive(false);
+                    isItemPickedUp = true;
+                    gameManager.DetermineDeliveryLocation(totalSecretsDelivered);
+                    if (detectedItem != null)
+                    {
+                        grabbedItem.SetActive(true);
+                        //gameManager.secrets[totalSecretsDelivered].SetActive(false);
+                        gameManager.DeactivateSecret(totalSecretsDelivered);
+                    }
+                    Debug.Log("secret number is : " + secretNumber);
                 }
-                Debug.Log("secret number is : " + secretNumber);
             }
+        }
+        else
+        {
+            pickUpItemUI.SetActive(false);
         }
         
     }

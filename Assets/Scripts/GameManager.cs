@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     public GameObject winScreen;
     public TextMeshProUGUI causeOfLosingText;
     public TextMeshProUGUI deliveryProgressText;
+    public bool isGameFinished;
+
 
     [Header("Audio Settings")]
     public AudioSource audioSource;
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
     float secondsRemaining;
 
     void Start() {
+        isGameFinished = false;
         indexOfActivatedDL = 0;
 
         if (Time.timeScale == 0) Time.timeScale = 1;
@@ -75,15 +78,17 @@ public class GameManager : MonoBehaviour
         if(playerController.currentHealth <= 0) GameOver("The ears got to you!");
 
         arrow.transform.LookAt(deliveryLocations[indexOfActivatedDL].transform);
-
-        if ((secondsRemaining -= Time.deltaTime)<=0)
+        if (!isGameFinished)
         {
-            timerText.text = "00:00";
-            GameOver("Time's up!!!");
-        }
-        else
-        {
-            timerText.text = TimeSpan.FromSeconds(secondsRemaining).ToString(@"mm\:ss");
+            if ((secondsRemaining -= Time.deltaTime) <= 0)
+            {
+                timerText.text = "00:00";
+                GameOver("Time's up!!!");
+            }
+            else
+            {
+                timerText.text = TimeSpan.FromSeconds(secondsRemaining).ToString(@"mm\:ss");
+            }
         }
     }
 
@@ -94,6 +99,9 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
         FindObjectOfType<CameraController>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        playerController.isGameFinished = true;
+        itemDetection.isGameFinished = true;
+        isGameFinished = true;
     }
 
     public void Retry() {
@@ -111,6 +119,9 @@ public class GameManager : MonoBehaviour
             Cursor.visible = true;
             FindObjectOfType<CameraController>().enabled = false;
             Cursor.lockState = CursorLockMode.None;
+            playerController.isGameFinished = true;
+            itemDetection.isGameFinished = true;
+            isGameFinished = true;
         }
     }
 

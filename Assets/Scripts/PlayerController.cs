@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour {
     public int maxHealth = 200;
     public int currentHealth;
 
+    public bool isGameFinished;
     void Start() {
+        isGameFinished = false;
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         currentHealth = maxHealth;
@@ -61,8 +63,11 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Hit Player");
-            Damage(10);
+            if (!isGameFinished)
+            {
+                Debug.Log("Hit Player");
+                Damage(10);
+            }
         }
     }
 }
