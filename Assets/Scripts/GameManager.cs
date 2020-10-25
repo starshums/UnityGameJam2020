@@ -119,6 +119,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene(0);
+    }
     void AssignSecrets()
     {
         for (int i = 0; i < numberOfDeliveryLocations; i++)
