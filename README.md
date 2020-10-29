@@ -17,7 +17,7 @@ A playable version is available here :
 
 https://play.unity.com/mg/other/jojo-s-bizarre-secret-delivery-unity-s-game-jam-2020
 
-# The team
+# :man_technologist: The team
 [Starshums](https://github.com/starshums)
 
 [Tintrash](https://github.com/tintrash08)
